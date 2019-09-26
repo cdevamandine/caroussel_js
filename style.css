@@ -4,19 +4,20 @@
     padding: 30; 
     background: rgb(32, 25, 25); 
     color: white; 
+    font-size: 1.5rem;
     text-align: center; 
     font-family: 'Times New Roman', Times, serif;
+    align-items: center;
 }
 
-}
 /* ------------body  ------------ */
-ul {
-   ;
-}
 li {
-    list-style: none;
+    list-style: none; display:none;
 }
-/* ------------photos  ------------ */
-#photos {
+.active{
+    display:block;
+}
 
-}
+
+/* ------------photos  ------------ */
+
