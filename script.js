@@ -1,9 +1,38 @@
-"use strict"
+"use strict";
 
 // creation variable //
-const button = document.body.querySelector(`button`);
-const li = document.body.querySelector(`li`);
+const buttonPrevious = document.querySelector(`.btn1`);
+const buttonNext = document.querySelector(`.btn2`);
+const li = document.querySelectorAll(`li`);
+let position= 0;
 
-// functions //
-button.addEventListener( `click`, () => alert(`ok `));
 
+// function nextImages //
+function nextImage() {
+    position++;
+
+    if (position === li.length) {
+        position=0;
+    }
+    for (let i =0; i<li.length; i++) {
+    li[i].classList.remove("active");
+    }
+}
+    li[position].classList.add("active");
+
+    // function previous //
+function previousImage() {
+    position--;
+
+    if (position === li.length) {
+        position=0;
+    }
+    for (let i =0; i<li.length; i--) {
+    li[i].classList.remove("active");
+    }
+}
+    li[position].classList.add("active");
+
+// functions buttons //
+buttonPrevious.addEventListener( `click`,()=> alert(`ok `));
+buttonNext.addEventListener( `click`,()=> alert(`ok `));
