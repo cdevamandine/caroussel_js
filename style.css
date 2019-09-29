@@ -4,20 +4,22 @@
     padding: 30; 
     background: rgb(32, 25, 25); 
     color: white; 
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center; 
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
 }
 
 /* ------------body  ------------ */
+#photos{
+    width: 4500px, 
+    height: 190px;  
+    border:none; 
+    height: 35px;
+}
 li {
-    list-style: none; display:none;
+    display:none;
 }
 .active{
     display:block;
 }
-
-
-/* ------------photos  ------------ */
-

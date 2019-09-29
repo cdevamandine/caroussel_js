@@ -3,8 +3,10 @@
 // creation variable //
 const buttonPrevious = document.querySelector(`.btn1`);
 const buttonNext = document.querySelector(`.btn2`);
+
 const li = document.querySelectorAll(`li`);
-let position= 0;
+
+let position = 0;
 
 
 // function nextImages //
@@ -12,27 +14,19 @@ function nextImage() {
     position++;
 
     if (position === li.length) {
-        position=0;
+        position = 0;
     }
-    for (let i =0; i<li.length; i++) {
-    li[i].classList.remove("active");
-    }
-}
-    li[position].classList.add("active");
 
-    // function previous //
-function previousImage() {
-    position--;
+    for (let i = 0; i < li.length; i++) {
+        li[i].classList.remove("active");
+    }
 
-    if (position === li.length) {
-        position=0;
-    }
-    for (let i =0; i<li.length; i--) {
-    li[i].classList.remove("active");
-    }
+     li[position].classList.add("active");
+
 }
-    li[position].classList.add("active");
+
+ 
 
 // functions buttons //
-buttonPrevious.addEventListener( `click`,()=> alert(`ok `));
-buttonNext.addEventListener( `click`,()=> alert(`ok `));
+//buttonPrevious.addEventListener(`click`,previousImage);
+buttonNext.addEventListener(`click`, nextImage);
