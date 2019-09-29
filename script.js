@@ -24,7 +24,18 @@ function nextImage() {
      li[position].classList.add("active");
 
 }
-
+// function previous //
+function previousImage(){
+    
+    if (positionNext > 0){
+        positionNext--;
+    }
+    for(let i = 0; i < li.length; i++){
+    li[i].classList.remove("active");
+    }
+    
+    li[positionNext].classList.add("active"); 
+}
  
 
 // functions buttons //
