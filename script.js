@@ -26,16 +26,17 @@ function nextImage() {
 }
 // function previous //
 function previousImage(){
-    
-    if (positionNext > 0){
-        positionNext--;
+    position--;
+
+    if (position === li.length) {
+        position = 0;
     }
-    for(let i = 0; i < li.length; i++){
-    li[i].classList.remove("active");
+
+    for (let i = 0; i < li.length; i--) {
+        li[i].classList.remove("active");
     }
-    
-    li[positionNext].classList.add("active"); 
-}
+
+     li[position].classList.add("active");
  
 
 // functions buttons //
